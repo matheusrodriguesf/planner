@@ -1,0 +1,19 @@
+version: '3.1'
+services:
+  planner-db:
+    image: mariadb
+    container_name: planner-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: planner
+      MYSQL_USER: planner
+      MYSQL_PASSWORD: planner
+    ports:
+      - "3306:3306"
+    networks:
+      - planner-network
+
+
+networks:
+  planner-network:
+    driver: bridge
