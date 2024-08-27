@@ -40,6 +40,6 @@ public class Record {
     @Column(name = "location", nullable = false, length = 255)
     String location;
 
-    @Column(name = "scheduling_date", nullable = false)
+    @Column(name = "scheduling_date")
     LocalDateTime schedulingDate;
 }
